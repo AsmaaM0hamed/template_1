@@ -1,0 +1,390 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+:root
+{
+    --main-cooler:rgb(0, 0, 0);
+    --sub-coler:rgb(192, 146, 93);
+}
+.container
+{
+    width: 80%;
+    margin: auto;
+}
+.list_stayle
+{
+    list-style: none;
+}
+a 
+{
+    text-decoration: none;
+}
+.hradline
+{
+    text-align: center;
+}
+.hradline h2
+{
+    font-size: 24px;
+    margin-bottom: 15px;
+
+}
+.hradline .line
+{  
+    display: block;
+    margin: auto;
+    width: 70px;
+    height: 3px;
+    background-color: var(--sub-coler);
+    margin-bottom: 20px;
+    transition: 0.4s;
+
+}
+.hradline:hover .line
+{
+    width: 140px;
+}
+/*header*/
+header 
+{
+    padding: 40px 0px;
+}
+.header
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header img
+{   max-width: 160px;
+    flex:1;
+}
+.header nav 
+{   text-align: right;
+    flex:4;
+}
+.header ul li
+{
+    display: inline-block;
+}
+.header nav ul li a 
+{  
+    position: relative;
+    font-size: large;
+    display: block;
+    padding: 12px 22px;
+    color: var(--main-cooler);
+}
+.link-itm:before
+{   
+    content: "";
+    position: absolute;
+    border-width: 0 2px;
+    border-color: var(--sub-coler);
+    border-style: solid;
+    width: 97%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: transform 0.4s ;
+    transform:scale3d(1,0,1);
+
+}
+.link-itm:hover:before
+{
+    transform:scale3d(1,1,1);
+}
+.link-itm:after
+{   
+    content: "";
+    position: absolute;
+    border-width: 2px 0px;
+    border-color: var(--sub-coler);
+    border-style: solid;
+    transition: transform 0.3s ;
+    transform:scale3d(0,1,1);
+    transform-origin: left;
+    width: 100%;
+    height: 95%;
+    top: 0;
+    left: 0;
+   
+
+}
+.link-itm:hover:after
+{   
+    transition-delay: 0.2s;
+    transform:scale3d(1,1,1);
+}
+/* dropdown*/
+.manue
+{
+    position: relative;
+}
+.drwopdown
+{
+    position: absolute;
+    background-color: rgb(233, 232, 232);
+    border: 2px solid var(--sub-coler);
+    padding: 18px;
+    width: 500px;
+    margin-top: 20px;
+    transform: scale(0);
+    transition: transform 0.2s;
+    opacity: 0;
+}
+.drwopdown ul
+{   text-align: center;
+    display: table-cell;
+}
+.drwopdown .min
+{
+    color: var(--sub-coler);
+}
+.manue:hover .drwopdown
+{
+    transform: scale(1);
+    opacity: 1;
+}
+/*task*/
+.manue2
+{
+    position: relative;
+}
+.drwop2
+{
+    position: absolute;
+    background-color: rgb(243, 243, 243);
+    border: 2px solid var(--sub-coler);
+    margin-top:18px ;
+    padding: 10px;
+    width: 150px;
+    text-align: center;
+    transform: scale(0);
+    transition: transform 0.4s;
+
+}
+.drwop2 ul li 
+{   display: block;
+    margin-bottom: 5px;
+    border-bottom: 0.5px solid var(--sub-coler);
+
+}
+.manue2:hover .drwop2
+{
+    transform: scale(1);
+}
+/*slider*/
+.slider .container img
+{   margin-bottom: 20px;
+    width: 100%;
+}
+/*category*/
+.category
+{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 15px;
+
+}
+
+.category-item img
+{   
+    
+    width: 100%;
+    margin-bottom: 5px;
+    transition: 0.2s;
+}
+.category-item:hover img{transform: scale(1.3);}
+.category-item h4
+{
+    font-size: 15px;
+    color: rgb(240, 194, 126);
+    opacity: 0.8;
+    padding: 5px;
+}
+.category-item h2
+{
+    font-size: 22px;
+    color: #000;
+    font-weight: normal;
+    padding: 9px;
+}
+.discount
+{   display: flex;
+    margin: 50px 0px;
+    height: 300px;
+}
+.discount-descrebt
+{
+    flex: 2;
+    width: 100%;
+    background-color: rgb(243, 227, 221);
+    padding: 20px;
+}
+.discount-descrebt h2
+{
+font-weight: normal;
+margin-bottom: 7px;
+color: var(--sub-coler);
+}
+.discount-descrebt h4
+{
+font-weight: normal;
+margin-bottom: 7px;
+color: lightslategray;
+}
+.discount-descrebt p
+{
+font-weight: normal;
+margin-bottom: 7px;
+color: rgb(0, 0, 0);
+}
+.discount-item
+{  padding: 11px;
+    background-image: url(foto/cms-banner-1.jpg);
+    background-position: center;
+    background-size: cover;
+    flex: 1;
+    margin: 0px 15px;
+}
+.discount-item2
+{    padding: 11px;
+    background-image: url(foto/cms-banner-2.jpg);
+    background-position: center;
+    background-size: cover;
+    flex: 1;
+}
+.info h4 
+{
+    font-weight: normal;
+margin-bottom: 7px;
+color: var(--sub-coler);
+}
+.info h3 
+{
+    font-weight: normal;
+margin-bottom: 7px;
+color: rgb(5, 5, 5);
+}
+/*proudcts*/
+.list-pyoudcts
+{
+    display: flex;
+    justify-content: center;
+}
+.list-pyoudcts li
+{
+    margin: 10px 30px;
+}
+.list-pyoudcts li:hover
+{
+    color: var(--sub-coler);
+}
+.proudcts-items
+{   margin: 40px 0px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+grid-gap: 20px;
+}
+
+.prodcts-img
+{
+    position: relative;
+    
+}
+.overhad-img
+{   
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform 0.4s;
+}
+.overhad-img ul 
+{
+    position: absolute;
+    top: 43%;
+    left: 29%;
+    
+}
+.overhad-img ul li
+{
+    display: inline-block;
+    width: 50px;
+    height: 40px;
+    background-color: var(--sub-coler);
+   text-align: center;
+   padding: 5px;
+   opacity: 0.7;
+}
+.overhad-img ul li:hover
+{
+    opacity: 0.9;
+}
+.overhad-img ul li a
+{   font-size: larger;
+    color: var(--main-cooler);
+  
+}
+.proudcts-item:hover .overhad-img
+{
+    transform: scaleX(1);
+}
+.iecon
+{
+    margin: 10px 0px;
+    background-color: rgb(233, 229, 229);
+    padding: 15px 5px;
+}
+.iecon span {
+    font-size: large;
+    color: #000;
+}
+.iecon h3
+{
+    color: rgb(226, 240, 39);
+    margin-top: 5px;
+}
+.pro-info
+{ margin: 30px 0px;
+    display: flex;
+  
+}
+.pro-info .info-img
+{
+    position:inherit;
+    flex: 1;
+}
+.info-img img{ 
+   
+    width: 370px;
+    height: 100%;
+    border: 0.5px solid coral;
+    animation-name: enter;
+    animation-duration: 4s;}
+.pro-info .info-de
+{  
+    flex: 3;
+    margin-left: 25px;
+    padding: 30px;
+    background-color: rgb(243, 227, 221);
+  
+}
+.pro-info .info-de h3
+{
+    color: var(--sub-coler);
+    margin: 16px 5px;
+    font-size: 28px;
+}
+.pro-info .info-de p{
+    color: black;
+    font-size: large;
+}
+@keyframes enter
+{
+    from{margin-left:-400px ;}
+    to {margin-left: 10px;}
+}
